@@ -1,0 +1,10 @@
+{
+  "name": "FinRoots Member Management",
+  "description": "A comprehensive member management dashboard for financial and insurance consultants. It features digital data collection, document OCR, policy management, sales pipeline, commission tracking, and AI-powered upselling suggestions using the Gemini API.",
+  "requestFramePermissions": [
+    "camera",
+    "geolocation",
+    "microphone"
+  ],
+  "prompt": ""
+}

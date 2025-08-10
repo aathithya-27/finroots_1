@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path d='M50 90s33.3-16.7 33.3-41.7V20.8L50 8.3 16.7 20.8v27.5C16.7 73.3 50 90 50 90z' fill='%232563EB'></path></svg>" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FinRoots Member Management</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <style>
+        /* Custom Scrollbar for Webkit browsers */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: #4a5568; /* gray-700 */
+            border-radius: 10px;
+            border: 2px solid #f7fafc; /* gray-100 */
+        }
+        
+        .dark ::-webkit-scrollbar-thumb {
+             background-color: #a0aec0; /* gray-400 */
+             border: 2px solid #1a202c; /* gray-900 */
+        }
+
+        /* Ensure dropdown options are always readable */
+        select option {
+            background: white !important;
+            color: black !important;
+        }
+        .dark select option {
+            background: #1F2937 !important; /* gray-800 */
+            color: white !important;
+        }
+    </style>
+    <script>
+      tailwind.config = {
+        darkMode: 'class', // Enable class-based dark mode
+        theme: {
+          extend: {
+            colors: {
+              'brand-primary': '#2563EB', // blue-600
+              'brand-secondary': '#10B981', // emerald-500
+              'brand-light': '#F3F4F6', // gray-100
+              'brand-dark': '#1F2937', // gray-800
+              'brand-text': '#374151', // gray-700
+            },
+            keyframes: {
+                fadeIn: {
+                    '0%': { opacity: 0, transform: 'translateY(10px)' },
+                    '100%': { opacity: 1, transform: 'translateY(0)' },
+                }
+            },
+            animation: {
+                'fade-in': 'fadeIn 0.5s ease-out forwards',
+            }
+          },
+        },
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "recharts": "https://esm.sh/recharts@^3.1.0",
+    "@google/genai": "https://esm.sh/@google/genai@^1.9.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
+    "react/": "https://esm.sh/react@^19.1.0/",
+    "react": "https://esm.sh/react@^19.1.0",
+    "lucide-react": "https://esm.sh/lucide-react@^0.525.0",
+    "@react-google-maps/api": "https://esm.sh/@react-google-maps/api@^2.19.3",
+    "react-dom": "https://esm.sh/react-dom@^19.1.1"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-brand-light dark:bg-gray-900 text-brand-text dark:text-gray-300">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
